@@ -18,6 +18,7 @@ struct inode_disk
     off_t length;                       /* File size in bytes. */
     unsigned magic;                     /* Magic number. */
     uint32_t unused[125];               /* Not used. */
+        bool is_dir;
   };
 
 /* Returns the number of sectors to allocate for an inode SIZE
@@ -342,4 +343,9 @@ off_t
 inode_length (const struct inode *inode)
 {
   return inode->data.length;
+}
+bool 
+inode_is_directory (const struct inode *inode)
+{
+  return inode->data.is_dir;
 }
