@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "flags.h": "c",
+        "thread.h": "c",
+        "interrupt.h": "c",
+        "vaddr.h": "c"
+    }
+}
